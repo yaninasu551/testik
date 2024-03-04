@@ -1,0 +1,56 @@
+/* style.css */
+
+/* Общие стили */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fae1e6;
+}
+
+header, footer {
+  background-color: #fcc5ca;
+  padding: 20px;
+  text-align: center;
+}
+
+h1, h2, label {
+  color: #333;
+}
+
+main {
+  padding: 20px;
+}
+
+button {
+  padding: 10px;
+  background-color: #ff7e82;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+/* Стили для фильтров */
+#filters {
+  background-color: #f8b5ba;
+  padding: 20px;
+}
+
+select {
+  padding: 5px;
+  margin-bottom: 10px;
+  width: 200px;
+}
+
+/* Стили для подходящих подарков */
+#gifts {
+  background-color: #ff94a1;
+  padding: 20px;
+}
+
+#giftList {
+  list-style-type: none;
+  padding: 0;
+}
+
+#giftList li {
+  margin-bottom: 10px;
+}
