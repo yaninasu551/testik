@@ -1,9 +1,16 @@
 /* style.css */
-
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 /* Общие стили */
 body {
   font-family: Arial, sans-serif;
   background-color: #fae1e6;
+  position: relative;
+  padding-bottom: 58px ;
+  min-height:100dvh
 }
 
 header, footer {
@@ -18,6 +25,18 @@ h1, h2, label {
 
 main {
   padding: 20px;
+  width: 100%;
+  max-width: 1185px;
+  margin: 0 auto;
+}
+
+.wrapper{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  border-radius: 2rem;
 }
 
 button {
@@ -26,14 +45,26 @@ button {
   color: #fff;
   border: none;
   cursor: pointer;
+  border-radius: 1rem;
+
 }
 
 /* Стили для фильтров */
 #filters {
   background-color: #f8b5ba;
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  max-width: 25%;
 }
-
+.filter {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 0.3rem;
+}
 select {
   padding: 5px;
   margin-bottom: 10px;
@@ -44,6 +75,10 @@ select {
 #gifts {
   background-color: #ff94a1;
   padding: 20px;
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 #giftList {
@@ -51,6 +86,57 @@ select {
   padding: 0;
 }
 
-#giftList li {
-  margin-bottom: 10px;
+#giftList {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+@keyframes smooth-appear {
+  to{
+    transform: translateY(0);
+    opacity:1;
+  }
+}
+
+
+.gift {
+  opacity: 0;
+  width: 12rem;
+  height: 13.5rem;
+  background-color: #f8b5ba;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+  padding: 1rem;
+  /* transform: translateY(-30px); */
+  transition: opacity 250ms ease-in-out;
+}
+
+.gift.open {
+    opacity: 1 !important;
+}
+
+.gift img{
+  width: 100%;
+  height: 70%;
+  border-radius: 0.6rem;
+}
+.gift span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 25%;
+  text-align: center;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }

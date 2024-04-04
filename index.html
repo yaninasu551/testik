@@ -10,49 +10,61 @@
         <h1>Приложение подарки</h1>
     </header>
     <main>
-        <section id="filters">
-            <h2>Выберите параметры подарка:</h2>
-            <label for="age">Возраст:</label>
-            <select id="age">
-                <option value="0-10">0-10 лет</option>
-                <option value="11-20">11-20 лет</option>
-                <option value="21-30">21-30 лет</option>
-                <option value="31-40">31-40 лет</option>
-                <option value="41-50">41-50 лет</option>
-                <option value="51+">51+ лет</option>
-            </select>
-            <label for="recipient">Для кого:</label>
-            <select id="recipient">
-                <option value="Мужчины">Мужчины</option>
-                <option value="Женщины">Женщины</option>
-                <option value="Дети">Дети</option>
-                <option value="Пары">Пары</option>
-                <option value="Друзья">Друзья</option>
-            </select>
-            <label for="occasion">Повод:</label>
-            <select id="occasion">
-                <option value="День рождения">День рождения</option>
-                <option value="Юбилей">Юбилей</option>
-                <option value="Свадьба">Свадьба</option>
-                <option value="Новый год">Новый год</option>
-                <option value="Другой">Другой</option>
-            </select>
-            <label for="interests">Интересы получателя:</label>
-            <select id="interests">
-                <option value="Книги">Книги</option>
-                <option value="Спорт">Спорт</option>
-                <option value="Технологии">Технологии</option>
-                <option value="Путешествия">Путешествия</option>
-                <option value="Мода">Мода</option>
-            </select>
-            <button onclick="findGifts()">Подобрать</button>
-        </section>
-        <section id="gifts">
-            <h2>Подходящие подарки:</h2>
-            <ul id="giftList">
-                <!-- Подарки будут добавлены динамически с помощью JavaScript -->
-            </ul>
-        </section>
+        <div class="wrapper">
+            <section id="filters">
+                <h2>Выберите параметры подарка:</h2>
+                <div class="filter">
+                    <label for="age">Возраст:</label>
+                    <select id="age">
+                        <option value="0-10">0-10 лет</option>
+                        <option value="11-20">11-20 лет</option>
+                        <option value="21-30">21-30 лет</option>
+                        <option value="31-40">31-40 лет</option>
+                        <option value="41-50">41-50 лет</option>
+                        <option value="51+">51+ лет</option>
+                    </select>
+                </div>
+                <div class="filter">
+                    <label for="recipient">Для кого:</label>
+                    <select id="recipient">
+                        <option value="Мужчины">Мужчины</option>
+                        <option value="Женщины">Женщины</option>
+                        <option value="Дети">Дети</option>
+                        <option value="Пары">Пары</option>
+                        <option value="Друзья">Друзья</option>
+                    </select>
+                </div>
+                <div class="filter">
+                    <label for="occasion">Повод:</label>
+                    <select id="occasion">
+                        <option value="День рождения">День рождения</option>
+                        <option value="Юбилей">Юбилей</option>
+                        <option value="Свадьба">Свадьба</option>
+                        <option value="Новый год">Новый год</option>
+                        <option value="Другой">Другой</option>
+                    </select>
+                </div>
+                <div class="filter">
+                    <label for="interests">Интересы получателя:</label>
+                    <select id="interests">
+                        <option value="Книги">Книги</option>
+                        <option value="Спорт">Спорт</option>
+                        <option value="Технологии">Технологии</option>
+                        <option value="Путешествия">Путешествия</option>
+                        <option value="Мода">Мода</option>
+                    </select>
+                </div>
+                <button onclick="findGifts()">Подобрать</button>
+            </section>
+            <section id="gifts">
+                <h2>Подходящие подарки:</h2>
+                <div id="giftList">
+    
+                    <!-- Подарки будут добавлены динамически с помощью JavaScript -->
+                </div>
+            </section>
+        </div>
+        
     </main>
     <footer>
         <p>Автор: &copy; Суржикова Я.В.</p>
